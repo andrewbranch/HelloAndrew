@@ -14,30 +14,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        setupSceneView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,17 +30,40 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+    
+    func setupSceneView() {
+        // Set the view's delegate
+        sceneView.delegate = self
+        
+        // Show debug info
+        // sceneView.showsStatistics = true
+        // sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
+        // Enable lighting
+        sceneView.autoenablesDefaultLighting = true
+        
+        let label = SCNText(string: "Hi! It’s Andrew!", extrusionDepth: 2)
+        label.materials = [SCNMaterial()]
+        label.firstMaterial!.diffuse.contents = UIColor.orange
+        label.firstMaterial!.specular.contents = UIColor.white
+        label.firstMaterial?.isDoubleSided = true
+        label.chamferRadius = 0.2
+    
+        let (minBound, maxBound) = label.boundingBox
+        let labelNode = SCNNode(geometry: label)
+        // Centre Node - to Centre-Bottom point
+        labelNode.pivot = SCNMatrix4MakeTranslation((maxBound.x - minBound.x) / 2, minBound.y, 0.01)
+        // Reduce default text size
+        labelNode.scale = SCNVector3Make(0.02, 0.02, 0.02)
+        labelNode.simdPosition = simd_float3.init(x: 0, y: 0, z: -1)
+        
+        sceneView.scene.rootNode.addChildNode(labelNode)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
 
     // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user

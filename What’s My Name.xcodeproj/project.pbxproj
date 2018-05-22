@@ -13,6 +13,7 @@
 		4935B55F20B3618C00BE967B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4935B55D20B3618C00BE967B /* Main.storyboard */; };
 		4935B56120B3618E00BE967B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4935B56020B3618E00BE967B /* Assets.xcassets */; };
 		4935B56420B3618E00BE967B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4935B56220B3618E00BE967B /* LaunchScreen.storyboard */; };
+		4935B56C20B3818000BE967B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935B56B20B3818000BE967B /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4935B56020B3618E00BE967B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4935B56320B3618E00BE967B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4935B56520B3618E00BE967B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4935B56B20B3818000BE967B /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4935B56020B3618E00BE967B /* Assets.xcassets */,
 				4935B56220B3618E00BE967B /* LaunchScreen.storyboard */,
 				4935B56520B3618E00BE967B /* Info.plist */,
+				4935B56B20B3818000BE967B /* UIColorExtensions.swift */,
 			);
 			path = "What’s My Name";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4935B56C20B3818000BE967B /* UIColorExtensions.swift in Sources */,
 				4935B55C20B3618C00BE967B /* ViewController.swift in Sources */,
 				4935B55820B3618C00BE967B /* AppDelegate.swift in Sources */,
 			);
