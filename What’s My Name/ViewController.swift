@@ -19,6 +19,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         setupSceneView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        addName()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -42,13 +46,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Enable lighting
         sceneView.autoenablesDefaultLighting = true
         
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
+    
+    func addName() {
         let label = SCNText(string: "Hi! It’s Andrew!", extrusionDepth: 2)
         label.materials = [SCNMaterial()]
         label.firstMaterial!.diffuse.contents = UIColor.orange
         label.firstMaterial!.specular.contents = UIColor.white
         label.firstMaterial?.isDoubleSided = true
-        label.chamferRadius = 0.2
-    
+        label.chamferRadius = 0.02
+        
         let (minBound, maxBound) = label.boundingBox
         let labelNode = SCNNode(geometry: label)
         // Centre Node - to Centre-Bottom point
@@ -58,9 +67,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         labelNode.simdPosition = simd_float3.init(x: 0, y: 0, z: -1)
         
         sceneView.scene.rootNode.addChildNode(labelNode)
-        
-        let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
     }
 
     // MARK: - ARSCNViewDelegate
