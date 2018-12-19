@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4935B55420B3618C00BE967B /* What’s My Name.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What’s My Name.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4935B55420B3618C00BE967B /* HelloAndrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloAndrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4935B55720B3618C00BE967B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4935B55920B3618C00BE967B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		4935B55B20B3618C00BE967B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		4935B54B20B3618C00BE967B = {
 			isa = PBXGroup;
 			children = (
-				4935B55620B3618C00BE967B /* What’s My Name */,
+				4935B55620B3618C00BE967B /* HelloAndrew */,
 				4935B55520B3618C00BE967B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		4935B55520B3618C00BE967B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4935B55420B3618C00BE967B /* What’s My Name.app */,
+				4935B55420B3618C00BE967B /* HelloAndrew.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4935B55620B3618C00BE967B /* What’s My Name */ = {
+		4935B55620B3618C00BE967B /* HelloAndrew */ = {
 			isa = PBXGroup;
 			children = (
 				4935B55720B3618C00BE967B /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				4935B56520B3618E00BE967B /* Info.plist */,
 				4935B56B20B3818000BE967B /* UIColorExtensions.swift */,
 			);
-			path = "What’s My Name";
+			path = HelloAndrew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4935B55320B3618C00BE967B /* What’s My Name */ = {
+		4935B55320B3618C00BE967B /* HelloAndrew */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4935B56820B3618E00BE967B /* Build configuration list for PBXNativeTarget "What’s My Name" */;
+			buildConfigurationList = 4935B56820B3618E00BE967B /* Build configuration list for PBXNativeTarget "HelloAndrew" */;
 			buildPhases = (
 				4935B55020B3618C00BE967B /* Sources */,
 				4935B55120B3618C00BE967B /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "What’s My Name";
-			productName = "What’s My Name";
-			productReference = 4935B55420B3618C00BE967B /* What’s My Name.app */;
+			name = HelloAndrew;
+			productName = "HelloAndrew";
+			productReference = 4935B55420B3618C00BE967B /* HelloAndrew.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4935B54F20B3618C00BE967B /* Build configuration list for PBXProject "What’s My Name" */;
+			buildConfigurationList = 4935B54F20B3618C00BE967B /* Build configuration list for PBXProject "HelloAndrew" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4935B55320B3618C00BE967B /* What’s My Name */,
+				4935B55320B3618C00BE967B /* HelloAndrew */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7U83U369J;
-				INFOPLIST_FILE = "What’s My Name/Info.plist";
+				INFOPLIST_FILE = "HelloAndrew/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7U83U369J;
-				INFOPLIST_FILE = "What’s My Name/Info.plist";
+				INFOPLIST_FILE = "HelloAndrew/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4935B54F20B3618C00BE967B /* Build configuration list for PBXProject "What’s My Name" */ = {
+		4935B54F20B3618C00BE967B /* Build configuration list for PBXProject "HelloAndrew" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4935B56620B3618E00BE967B /* Debug */,
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4935B56820B3618E00BE967B /* Build configuration list for PBXNativeTarget "What’s My Name" */ = {
+		4935B56820B3618E00BE967B /* Build configuration list for PBXNativeTarget "HelloAndrew" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4935B56920B3618E00BE967B /* Debug */,

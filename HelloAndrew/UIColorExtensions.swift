@@ -1,6 +1,6 @@
 //
 //  UIColorExtensions.swift
-//  What’s My Name
+//  HelloAndrew
 //
 //  Created by Andrew Branch on 5/21/18.
 //  Copyright © 2018 Wheream.io. All rights reserved.
